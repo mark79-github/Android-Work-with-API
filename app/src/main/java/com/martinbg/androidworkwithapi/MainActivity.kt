@@ -32,6 +32,10 @@ class MainActivity : AppCompatActivity() {
         countryRepository.getCountries()?.enqueue(object : Callback<List<Country>> {
             override fun onResponse(call: Call<List<Country>>, response: Response<List<Country>>) {
                 val countries = response.body() ?: return
+//                var countries: List<Country> = ArrayList<Country>()
+//                if (response.body()?.size != 0){
+//                    val countries = response.body() ?: ArrayList<Country>()
+//                }
                 val adapter = CountryAdapter(countries)
                 binding.countriesList.adapter = adapter
             }
