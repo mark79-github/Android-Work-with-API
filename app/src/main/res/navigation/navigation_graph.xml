@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_graph"
+    app:startDestination="@id/main_fragment">
+
+    <fragment
+        android:id="@+id/main_fragment"
+        android:name="com.martinbg.androidworkwithapi.ui.MainFragment"
+        android:label="All countries"
+        tools:layout="@layout/fragment_main">
+        <action
+            android:id="@+id/action_mainFragment_to_detailFragment"
+            app:destination="@id/detail_fragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/detail_fragment"
+        android:name="com.martinbg.androidworkwithapi.ui.DetailFragment"
+        android:label="Details"
+        tools:layout="@layout/fragment_detail">
+        <argument
+            android:name="name"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_detailFragment_to_mainFragment"
+            app:destination="@id/main_fragment"
+            app:popExitAnim="@android:anim/slide_in_left"
+            app:popUpTo="@id/main_fragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+</navigation>

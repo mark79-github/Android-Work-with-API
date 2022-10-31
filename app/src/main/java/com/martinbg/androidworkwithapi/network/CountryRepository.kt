@@ -1,5 +1,7 @@
-package com.martinbg.androidworkwithapi
+package com.martinbg.androidworkwithapi.network
 
+import android.util.Log
+import com.martinbg.androidworkwithapi.model.Country
 import retrofit2.Call
 
 class CountryRepository(private val countryService: CountryService) {
@@ -7,7 +9,7 @@ class CountryRepository(private val countryService: CountryService) {
         return try {
             countryService.getCountries()
         } catch (e: Exception) {
-            // an error occurred, handle and act accordingly
+            Log.e("Error", "getCountries()")
             null
         }
     }
@@ -16,7 +18,7 @@ class CountryRepository(private val countryService: CountryService) {
         return try {
             countryService.getCountryByName(name)
         } catch (e: Exception) {
-            // an error occurred, handle and act accordingly
+            Log.e("Error", "getCountryByName()")
             null
         }
     }

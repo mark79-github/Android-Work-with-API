@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">Android Work with API</string>
-    <string name="todo">TODO</string>
-    <string name="get_data">get data</string>
-    <string name="country_flag_image">Country flag image</string>
+    <string name="back_button_caption">Back</string>
+    <string name="country_capital">Capital: %1$s</string>
+    <string name="country_region">Region: %1$s</string>
+    <string name="country_population">Population: %1$d</string>
+    <string name="country_area">Area: %1$.2f</string>
 </resources>
