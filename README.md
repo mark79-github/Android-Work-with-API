@@ -5,4 +5,3 @@
 ### Work with API 
 * External library dependencies
 * Sending, receiving and processing data in-app
-* Example application
